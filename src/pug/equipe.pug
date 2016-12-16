@@ -1,0 +1,17 @@
+section.s-medium
+  .container
+    .row
+      .col-md-12
+        h2.s-uppercase.t-color--seven
+          strong Equipe
+      mixin col-md-4(img, text, text2)
+        .col-md-4
+          .b-gradient--secundary.text-center
+            .c-box.t-color--three.min-bar
+              p.fs--six
+                strong= text
+              i= text2
+            img.img-circle.img-thumbnail(src=img)
+      +col-md-4('img/thumbs/DrThales.png','Dr.Thales Brasil','Especialista em Implante, Especialista em Periodontia, Mestrado em Implantodontia')
+      +col-md-4('img/thumbs/DrJalusa.png','Dr(a).Jalusa Tassinari','Ortodontista')
+      +col-md-4('img/thumbs/DrMaira.png','Dr(a).Maíra Mascarenhas','Clinico geral, atualização em endodontia, aperfeiçoamento em cirurgia oral menor.')

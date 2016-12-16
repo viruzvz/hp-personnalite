@@ -1,0 +1,137 @@
+@import 'vendors/bootstrap';
+
+@one:#fff;
+@two:#222;
+@three:#666;
+@four:#eee;
+@five:#d1f4ff;
+@six:#ccc;
+@seven:#3e183a;
+@eight:#af499f;
+@space-default:10px;
+
+body {
+  font-family: Myriad Pro;
+}
+.topo {
+  position: relative;
+}
+///////////////////////////////////////
+.s-uppercase {
+  text-transform: uppercase;
+}
+.br-top {
+  border-top: 5px solid @six;
+}
+/////////////////////////////////////// componente para ol de carousel bootstrap
+.s-indicators {
+  top:20px;
+  bottom: inherit;
+  li {
+    border: 3px solid @one;
+    background-color: @one;
+  }
+  .active {
+    background-color: @eight;
+  }
+}
+/////////////////////////////////////// componente especifico do tema
+.min-bar {
+  min-height: 101px;
+}
+.colum-bar {
+  width: 30%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  &:before {
+    content: '' !important;
+    position: absolute;
+    right: -20px;
+    height: 20px;
+    top: 0;
+    width: 20px;
+    -ms-transform: rotate(45deg);
+    transform: rotate(-90deg);
+    z-index: 1020;
+    background: linear-gradient(135deg, #fff 51%, transparent 51%);
+  }
+}
+////////////////////////// link control
+.l-primary {
+  color:@five;
+  &:hover {
+    color:@one;
+    text-decoration: none;
+  }
+}
+.l-nav {
+  color:@three;
+  &:hover {
+    color: @seven;
+  }
+}
+////////////////////////// Classe de espaçamento de conteudos
+.s-small {margin-bottom: 5px;}
+.s-medium {margin-bottom: 15px;}
+.s-large {margin-bottom: 30px;}
+////////////////////////// componente de cores para background e textos
+.b-color--one {background-color: @one;}
+.t-color--one {color: @one;}
+.b-color--two {background-color: @two;}
+.t-color--two {color: @two;}
+.b-color--three {background-color: @three;}
+.t-color--three {color: @three;}
+.b-color--four {background-color: @four;}
+.t-color--four {color: @four;}
+.b-color--five {background-color: @five;}
+.t-color--five {color: @five;}
+.b-color--six {background-color: @six;}
+.t-color--six {color: @six;}
+.b-color--seven {background-color: @seven;}
+.t-color--seven {color: @seven;}
+.b-color--eight {background-color: @eight;}
+.t-color--eight {color: @eight;}
+/////////////////////////////////////// componente gradient background
+.b-gradient--primary {background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 40%,rgba(238,238,238,1) 40%,rgba(238,238,238,1) 40%,rgba(238,238,238,1) 100%);}
+.b-gradient--secundary {background: linear-gradient(to bottom, rgba(209,244,255,1) 0%,rgba(209,244,255,1) 71%,rgba(255,255,255,1) 71%,rgba(255,255,255,1) 100%);}
+////////////////////////// componente de espaçamentos
+.c-top {padding-top: @space-default;}
+.c-bottom {padding-bottom: @space-default;}
+.c-right {padding-right: @space-default;}
+.c-left {padding-left: @space-default;}
+.c-box {padding: @space-default;}
+.c-negative {padding: 0;}
+.c-nospace {margin: 0;}
+.c-box--content {border: 1px solid @six;}
+.c-box--content--b {border-bottom: 1px solid @six;}
+////////////////////////// componente de tamanho de fontes
+.fs--zero {font-size: 10px;}
+.fs--one{font-size: 12px;}
+.fs--two {font-size: 14px;}
+.fs--three {font-size: 16px;}
+.fs--four {font-size: 18px;}
+.fs--five {font-size: 20px;}
+.fs--six {font-size: 22px;}
+.fs--seven {font-size: 24px;}
+.fs--eight {font-size: 26px;}
+.fs--nine {font-size: 28px;}
+.fs--ten {font-size: 30px;}
+.fs--eleven {font-size: 32px;}
+.fs--fourteen {font-size: 34px;}
+.fs--fiveteen {font-size: 36px;}
+.fs--sixteen {font-size: 38px;}
+.fs--seventeen {font-size: 40px;}
+.fs--eightteen {font-size: 42px;}
+.fs--nineteen {font-size: 44px;}
+.fs--twenty {font-size: 46px;}
+.fs--twenty-one {font-size: 48px;}
+.fs--twenty-two {font-size: 50px;}
+.fs--twenty-three {font-size: 52px;}
+.fs--twenty-four{font-size: 54px;}
+.fs--twenty-five {font-size: 56px;}
+/////////////////////// Line-height class
+.l--middle{
+  line-height: 6.5;
+}

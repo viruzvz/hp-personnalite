@@ -1,0 +1,15 @@
+section.s-medium
+  .container
+    .row
+      .col-md-12
+        h2.s-uppercase.t-color--seven
+          strong Especialidades
+      mixin col-md-3(img, text)
+        .col-md-3
+          .b-gradient--primary.text-center
+            img(src=img)
+            p.t-color--three.fs--eight= text
+      +col-md-3('img/dentist01.svg','Implantondontia')
+      +col-md-3('img/dentist02.svg','Endodontia')
+      +col-md-3('img/dentist03.svg','Estética oral')
+      +col-md-3('img/dentist04.svg','Periodontia')

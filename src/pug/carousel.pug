@@ -1,0 +1,36 @@
+section.b-color--four.s-medium
+  .container
+    .row
+      .col-md-12
+        #carousel-example-generic.carousel.slide(data-ride='carousel')
+          // Indicators
+          ol.carousel-indicators.hidden-xs.s-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+          // Wrapper for slides
+          .carousel-inner(role='listbox')
+            mixin item(c1,c2,c3,c4,c44,c5,c55,texto)
+              .item(class= c1)
+                img.img-responsive(src= c2, alt= c3)
+                .carousel-caption
+                  .text-left
+                    h1(class= c4)
+                      = c44
+                      br
+                      small(class= c5)
+                        = c55
+                  p.hidden-xs
+                    = texto
+
+            +item('active','../img/slide1.jpg','Slider1','fs--twenty-five','Instituto Pesonnalite','fs--nineteen t-color--eight','Desde 1998', 'Aqui o cliente encontra produtos e serviços que tornam o dia-a-dia mais fácil, mais prático e muito mais prazeroso. Afinal, nós queremos que a Equipe Saúde Vantagens seja realmente vantajoso, do ponto de vista de quem mais importa: você.')
+            +item('','../img/slide2.jpg','Slider2','fs--twenty-five','Implantes guiado por computador','fs--nineteen t-color--five','Microscópio Especializado','')
+            +item('','../img/slide3.jpg','Slider3','fs--twenty-five','Implantes guiado por computador','fs--nineteen t-color--five','Microscópio Especializado','')
+
+          // Controls
+          a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+            span.sr-only Previous
+          a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+            span.sr-only Next
