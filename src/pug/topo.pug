@@ -10,7 +10,7 @@ header
               span.glyphicon.glyphicon-time
               |  segunda a sexta de 8:00 às 12:00 e de 13:30 às 19:00. Aos sábados de 8:00 as 12:00  |  sábados e domingos fechado
             .col-md-2.col-sm-2.text-right
-              a(href="#").fs--one.l-primary
+              a(href="http://webmail5.ultramail.com.br/" target='_blank').fs--one.l-primary
                 span.glyphicon.glyphicon-envelope
                 |  WEBMAIL
   .c-box--content--b
@@ -27,13 +27,12 @@ header
     nav.navbar.c-nospace
       .row
         .navbar-header
-          button.navbar-toggle.collapsed.navbar-toggle--lgm(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        //  a.navbar-brand.head-menu--navbar-brand(href='#' title="Home")
-            img.img-responsive(src="img/logo-lgm.svg" alt="Logo LGM")
+          button.navbar-toggle.collapsed.b-color--seven(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.b-color--one.sr-only Toggle navigation
+            span.b-color--one.icon-bar
+            span.b-color--one.icon-bar
+            span.b-color--one.icon-bar
+
         #navbar.navbar-collapse.collapse
           mixin menu(classe, link)
             ul(class!=classe)
@@ -42,11 +41,11 @@ header
               li
                 a.hvr-underline-reveal(class!=link, href="o-escritorio.html") Sobre
               li
-                a.hvr-underline-reveal(class!=link, href="especialidades.html") Especialidades
+                a.hvr-underline-reveal(class!=link, href="#especialidades") Especialidades
               li
                 a.hvr-underline-reveal(class!=link, href="equipe.html") Equipe
               li
-                a.hvr-underline-reveal(class!=link, href="#") Convênios
+                a.hvr-underline-reveal(class!=link, href="#convenios") Convênios
               li
-                a.hvr-underline-reveal(class!=link, href="contatos.html") Contatos
+                a.hvr-underline-reveal(class!=link, href="#contatos") Contatos
           +menu('nav navbar-nav head-menu fs--three s-uppercase','l-nav')

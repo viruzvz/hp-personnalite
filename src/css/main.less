@@ -23,7 +23,7 @@ body {
 .br-top {
   border-top: 5px solid @six;
 }
-/////////////////////////////////////// componente para ol de carousel bootstrap
+/////////////////////////////////////// componente do tema para carousel bootstrap
 .s-indicators {
   top:20px;
   bottom: inherit;
@@ -134,4 +134,22 @@ body {
 /////////////////////// Line-height class
 .l--middle{
   line-height: 6.5;
+}
+
+
+@media (max-width: @screen-xs-max) {
+  .l--middle{
+    line-height: 1.4;
+  }
+  .fs--twenty-five {font-size: 30px;}
+  .fs--nineteen {font-size: 22px;}
+  .s-caption {
+    position: inherit;
+    left: inherit;
+    bottom: inherit;
+    right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    background-color: @two;
+  }
 }

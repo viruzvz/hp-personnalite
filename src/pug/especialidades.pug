@@ -3,7 +3,9 @@ section.s-medium
     .row
       .col-md-12
         h2.s-uppercase.t-color--seven
+          a(name='especialidades')
           strong Especialidades
+
       mixin col-md-3(img, text)
         .col-md-3
           .b-gradient--primary.text-center
@@ -11,5 +13,10 @@ section.s-medium
             p.t-color--three.fs--eight= text
       +col-md-3('img/dentist01.svg','Implantondontia')
       +col-md-3('img/dentist02.svg','Endodontia')
-      +col-md-3('img/dentist03.svg','Estética oral')
+      +col-md-3('img/dentist03.svg','Odontologia')
       +col-md-3('img/dentist04.svg','Periodontia')
+      +col-md-3('img/dentist08.svg','Protese')
+      +col-md-3('img/dentist06.svg','Estética oral')
+      +col-md-3('img/dentist07.svg','Cirurgias')
+      +col-md-3('img/dentist05.svg','Clinica Geral')
+
