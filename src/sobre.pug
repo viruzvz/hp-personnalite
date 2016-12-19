@@ -1,0 +1,34 @@
+extends index
+block content
+  include pug/topo
+  section
+    .b-color--four.c-box.s-medium
+      .container
+        .row
+          .col-md-12
+            h2.c-nospace.s-uppercase.t-color--seven
+              strong Sobre
+    article
+      .container
+        .row
+          .col-md-6
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .col-md-6
+            mixin gallery(src, num)
+              .col-lg-3.col-md-4.col-xs-6.thumb
+                a(href='#')
+                  img.img-responsive.thumbnail(src= src , alt= num)
+            +gallery('img/gallery/DSC04777.jpg','1')
+            +gallery('img/gallery/DSC04782.jpg','2')
+            +gallery('img/gallery/DSC04786.jpg','3')
+            +gallery('img/gallery/DSC04792.jpg','4')
+
+            +gallery('img/gallery/DSC04795.png','5')
+            +gallery('img/gallery/DSC04806.jpg','6')
+            +gallery('img/gallery/DSC04815.jpg','7')
+            +gallery('img/gallery/DSC04824.jpg','8')
+
+            +gallery('img/gallery/DSC04829.jpg','9')
+            +gallery('img/gallery/DSC04835.jpg','10')
+  include pug/galeria-modal
+  include pug/footer

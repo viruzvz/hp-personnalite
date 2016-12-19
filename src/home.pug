@@ -2,8 +2,24 @@ extends index
 block content
   include pug/topo
   include pug/carousel
-  include pug/especialidades
-  include pug/equipe
+
+  section.s-medium(role='Especialidades')
+  .container
+    .row
+      .col-md-12
+        h2.s-uppercase.t-color--seven
+          strong Especialidades
+      include pug/especialidades
+
+  section.s-medium(role='Equipe')
+  .container
+    .row
+      .col-md-12
+        h2.s-uppercase.t-color--seven
+          strong Equipe
+      include pug/equipe
+
+
   include pug/convenios
   include pug/contatos
   include pug/footer

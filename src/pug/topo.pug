@@ -17,7 +17,7 @@ header
     .container.c-bottom.c-top
       .row
         .col-md-4
-          img(src='img/logo.svg')
+          a(href='http://www.personnaliteodontologia.com.br/'): img(src='img/logo.svg')
         .col-md-8.text-right.fs--five.l--middle.t-color--three
           span.glyphicon.glyphicon-map-marker
           span  ASA NORTE-DF &nbsp; &nbsp;
@@ -37,15 +37,13 @@ header
           mixin menu(classe, link)
             ul(class!=classe)
               li
-                a.hvr-underline-reveal(class!=link, href="projeto.html") Início
+                a.hvr-underline-reveal(class!=link, href="index.html") Início
               li
-                a.hvr-underline-reveal(class!=link, href="o-escritorio.html") Sobre
+                a.hvr-underline-reveal(class!=link, href="sobre.html") Sobre
               li
-                a.hvr-underline-reveal(class!=link, href="#especialidades") Especialidades
+                a.hvr-underline-reveal(class!=link, href="especialidades.html") Especialidades
               li
                 a.hvr-underline-reveal(class!=link, href="equipe.html") Equipe
               li
-                a.hvr-underline-reveal(class!=link, href="#convenios") Convênios
-              li
-                a.hvr-underline-reveal(class!=link, href="#contatos") Contatos
+                a.hvr-underline-reveal(class!=link, href="contatos.html") Contatos
           +menu('nav navbar-nav head-menu fs--three s-uppercase','l-nav')

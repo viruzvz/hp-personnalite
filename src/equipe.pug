@@ -1,0 +1,16 @@
+extends index
+block content
+  include pug/topo
+  section
+    .b-color--four.c-box.s-medium
+      .container
+        .row
+          .col-md-12
+            h2.c-nospace.s-uppercase.t-color--seven
+              strong Equipe
+    article
+      .container
+        .row
+          include pug/equipe
+
+  include pug/footer
