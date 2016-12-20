@@ -3,7 +3,8 @@
   "version": "0.1",
   "scripts": {
     "dev": "mosaaaico2 dev",
-    "build": "mosaaaico2 build"
+    "build": "mosaaaico2 build",
+    "start": "serve dist"
   },
   "devDependencies": {
     "mosaaaico2": "fabianonunes/mosaaaico2"
@@ -11,7 +12,7 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "font-awesome": "^4.7.0",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "serve": "^2.0.0"
   }
-
 }
