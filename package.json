@@ -1,10 +1,11 @@
 {
   "name": "hp-personnalite",
-  "version": "0.1",
+  "version": "0.0.1",
   "scripts": {
     "dev": "mosaaaico2 dev",
     "build": "mosaaaico2 build",
-    "start": "serve dist"
+    "start": "serve dist",
+    "prestart": "npm run build"
   },
   "devDependencies": {
     "mosaaaico2": "fabianonunes/mosaaaico2"
