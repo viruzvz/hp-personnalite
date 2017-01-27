@@ -1,14 +1,15 @@
-mixin col-md-3(img, text)
+mixin col-md-3(img, text, text2)
   .col-md-3
-    .b-gradient--primary.text-center
+    .b-gradient--primary.text-center.s-medium
       img(src=img)
       p.t-color--three.fs--eight= text
-+col-md-3('assets/img/dentist01.svg','Implantondontia')
-+col-md-3('assets/img/dentist02.svg','Endodontia')
-+col-md-3('assets/img/dentist03.svg','Odontologia')
-+col-md-3('assets/img/dentist04.svg','Periodontia')
-+col-md-3('assets/img/dentist08.svg','Protese')
-+col-md-3('assets/img/dentist06.svg','Estética oral')
-+col-md-3('assets/img/dentist07.svg','Cirurgias')
-+col-md-3('assets/img/dentist05.svg','Clinica Geral')
+      small.br-easy.b-color--six.c-box.t-color--two= text2
++col-md-3('assets/img/dentist01.svg','Implantondontia', 'Guiado por Computador')
++col-md-3('assets/img/dentist02.svg','Endodontia', 'Com Microscópio')
++col-md-3('assets/img/dentist03.svg','Ortodontia', 'Aparelhos Estéticos de Porcelana')
++col-md-3('assets/img/dentist04.svg','Periodontia', 'Guiado')
++col-md-3('assets/img/dentist08.svg','Protese', 'Guiado')
++col-md-3('assets/img/dentist06.svg','Estética oral', 'Guiado')
++col-md-3('assets/img/dentist07.svg','Cirurgias', 'Guiado')
++col-md-3('assets/img/dentist05.svg','Clinica Geral', 'Guiado')
 
