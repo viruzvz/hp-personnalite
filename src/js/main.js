@@ -1,6 +1,5 @@
 var $ = require('jquery')
 ;!function () {
-
   $(document).ready(function() {
   $('.thumbnail').click(function(){
         $('.modal-body--js').empty();
