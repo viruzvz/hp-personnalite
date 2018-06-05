@@ -1,10 +1,12 @@
 @import 'vendors/bootstrap';
 
 @one:#fff;
+@one-offset:#f9f9f9;
 @two:#222;
 @three:#666;
 @four:#eee;
 @five:#d1f4ff;
+@five-offset:#5c8bb1;
 @six:#ccc;
 @seven:#3e183a;
 @eight:#af499f;
@@ -62,6 +64,24 @@ body {
     background: linear-gradient(135deg, #fff 51%, transparent 51%);
   }
 }
+////////////////////////// componente media
+.media-object {
+  max-width: 100px !important;
+}
+////////////////////////// embed
+.Embed {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.Embed--3by2 {
+    padding-bottom: 66.667%;
+}
+.Embed--16by9 {
+    padding-bottom: 35.600%;
+}
 ////////////////////////// link control
 .l-primary {
   color:@five;
@@ -80,9 +100,12 @@ body {
 .s-small {margin-bottom: 5px;}
 .s-medium {margin-bottom: 15px;}
 .s-large {margin-bottom: 30px;}
+.s-gutter-negative--right {margin-right:-15px;}
 ////////////////////////// componente de cores para background e textos
 .b-color--one {background-color: @one;}
 .t-color--one {color: @one;}
+.b-color--one-offset {background-color: @one-offset;}
+.t-color--one-offset {color: @one-offset;}
 .b-color--two {background-color: @two;}
 .t-color--two {color: @two;}
 .b-color--three {background-color: @three;}
@@ -91,6 +114,8 @@ body {
 .t-color--four {color: @four;}
 .b-color--five {background-color: @five;}
 .t-color--five {color: @five;}
+.b-color--five-offset {background-color:@five-offset;}
+.t-color--five-offset {color: @five-offset;}
 .b-color--six {background-color: @six;}
 .t-color--six {color: @six;}
 .b-color--seven {background-color: @seven;}

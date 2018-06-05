@@ -1,17 +1,18 @@
-mixin col-md-4(img, text, text2)
-  .col-md-4.s-small
-    .b-gradient--secundary.text-center
-      .c-box.t-color--three.min-bar
-        p.fs--six
-          strong= text
-        i= text2
-      img.img-circle.img-thumbnail(src=img)
+mixin media(src, text, text2)
+	.col-md-6.col-xs-12.s-large
+		.media.b-color--one-offset.c-box
+			.media-left
+				a(href='#')
+					img.media-object.img-circle.img-thumbnail(src=src)
+			.media-body
+				h4.media-heading.s-uppercase.t-color--seven: strong= text
+				em= text2
+			.text-right
+				a.btn.btn-success.btn-xs(): i.fas.fa-plus-square &nbsp; Saiba mais
 
-
-
-+col-md-4('assets/img/thumbs/DrThales.png','Dr. Thales Brasil','Esp. Periodontia, Esp. Implantodontia, Mes. Implantodontia, Dou. Implantodontia, Consultor Científico em Biomateriais')
-+col-md-4('assets/img/thumbs/DrJalusa.png','Dr(a). Jalusa Tassinari','Ortodontista')
-+col-md-4('assets/img/thumbs/DrMaira.png','Dr(a). Maíra Mascarenhas','Clinico geral, atualização em endodontia, aperfeiçoamento em cirurgia oral menor.')
-+col-md-4('assets/img/thumbs/DrThayse.png','Dr(a). Thayse','Especialista em prótese dentária.')
-+col-md-4('assets/img/thumbs/DrJoao.png','Dr. João Henrique','Clinico geral')
-+col-md-4('assets/img/thumbs/DrRogerio.png','Dr. Rogerio Ariela','Especialista em endodontia.')
++media('assets/img/thumbs/DrThales.png','Dr. Thales Brasil','Esp. Periodontia, Esp. Implantodontia, Mes. Implantodontia, Dou. Implantodontia, Consultor Científico em Biomateriais')
++media('assets/img/thumbs/DrJalusa.png','Dr(a). Jalusa Tassinari','Ortodontista')
++media('assets/img/thumbs/DrMaira.png','Dr(a). Maíra Mascarenhas','Clinico geral, atualização em endodontia, aperfeiçoamento em cirurgia oral menor.')
++media('assets/img/thumbs/DrThayse.png','Dr(a). Thayse','Especialista em prótese dentária.')
++media('assets/img/thumbs/DrJoao.png','Dr. João Henrique','Clinico geral')
++media('assets/img/thumbs/DrRogerio.png','Dr. Rogerio Ariela','Especialista em endodontia.')

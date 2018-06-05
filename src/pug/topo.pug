@@ -7,22 +7,24 @@ header
         .col-md-12.c-top.c-bottom
           .row
             .col-md-10.col-sm-10.text-right.t-color--one.fs--one
-              span.glyphicon.glyphicon-time
+              span.fas.fa-clock
               |  segunda a sexta de 8h00 às 12h00 e de 13h30 às 19h00. Aos sábados de 8h00 às 12h00
             .col-md-2.col-sm-2.text-right
-              a(href="http://webmail5.ultramail.com.br/" target='_blank').fs--one.l-primary
-                span.glyphicon.glyphicon-envelope
+              a(href="http://webmail5.ultramail.com.br/" target='_blank').fs--zero.l-primary
+                span.fas.fa-envelope-square
                 |  WEBMAIL
   .c-box--content--b
     .container.c-bottom.c-top
       .row
         .col-md-4
           a(href='http://www.personnaliteodontologia.com.br/'): img(src='assets/img/logo.svg')
-        .col-md-8.text-right.fs--five.l--middle.t-color--three
-          span.glyphicon.glyphicon-map-marker
+        .col-md-8.text-right.fs--one.l--middle.t-color--three.c-top
+          span.fas.fa-map-marker
           span  ASA NORTE-DF &nbsp; &nbsp;
-          span.glyphicon.glyphicon-earphone
-          span  (61) 3349-8153 / (61) 3447-6071
+          span.fas.fa-phone-square
+          span  (61) 3349-8153 &nbsp;
+          span.fas.fa-phone-square
+          span  (61) 3447-6071
   .container
     nav.navbar.c-nospace
       .row
@@ -37,13 +39,20 @@ header
           mixin menu(classe, link)
             ul(class!=classe)
               li
-                a.hvr-underline-reveal(class!=link, href="index.html") Início
+                a.hvr-underline-reveal(class!=link, href="index.html"): strong Início
               li
-                a.hvr-underline-reveal(class!=link, href="sobre.html") Sobre
+                a.hvr-underline-reveal(class!=link, href="sobre.html"): strong Sobre
               li
-                a.hvr-underline-reveal(class!=link, href="especialidades.html") Especialidades
+                a.hvr-underline-reveal(class!=link, href="especialidades.html"): strong Especialidades
               li
-                a.hvr-underline-reveal(class!=link, href="equipe.html") Equipe
+                a.hvr-underline-reveal(class!=link, href="equipe.html"): strong Equipe
               li
-                a.hvr-underline-reveal(class!=link, href="contatos.html") Contatos
-          +menu('nav navbar-nav head-menu fs--three s-uppercase','l-nav')
+                a.hvr-underline-reveal(class!=link, href="contatos.html"): strong Contatos
+
+
+          +menu('nav navbar-nav head-menu fs--two s-uppercase','l-nav')
+          ul.pull-right.list-unstyled.nav.navbar-nav.head-menu.fs--three.s-uppercase.s-gutter-negative--right
+            li
+              a(href='#' title='Facebook'): i.fab.fa-facebook
+            li
+              a(href='#' title='Instagram'): i.fab.fa-instagram
