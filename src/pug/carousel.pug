@@ -1,19 +1,21 @@
 section.b-color--four.s-medium
 
-  #carousel-example-generic.carousel.slide(data-ride='carousel')
+  #carousel-personnalite.carousel.slide(data-ride='carousel')
     // Indicators
     ol.carousel-indicators.hidden-xs.s-indicators
-      li.active(data-target='#carousel-example-generic', data-slide-to='0')
-      // li(data-target='#carousel-example-generic', data-slide-to='1')
-      li(data-target='#carousel-example-generic', data-slide-to='2')
-      li(data-target='#carousel-example-generic', data-slide-to='3')
+      li.active(data-target='#carousel-personnalite', data-slide-to='1')
+      li(data-target='#carousel-personnalite', data-slide-to='2')
+      li(data-target='#carousel-personnalite', data-slide-to='3')
+      li(data-target='#carousel-personnalite', data-slide-to='4')
+      li(data-target='#carousel-personnalite', data-slide-to='5')
+      li(data-target='#carousel-personnalite', data-slide-to='6')
     // Wrapper for slides
     .carousel-inner(role='listbox')
       mixin item(c1,c2,c3,c4,c44,c5,c55,color, texto)
         .item(class= c1)
           .Embed.Embed--16by9
             img.img-responsive(src= c2, alt= c3)
-          .carousel-caption.s-caption
+          .carousel-caption.s-caption.hidden-xs
             .text-left
               h1(class= c4)
                 = c44
@@ -23,18 +25,17 @@ section.b-color--four.s-medium
             p(class= color).hidden-xs
               = texto
 
-      +item('active','https://unsplash.it/2000/1500?random','Slider1','fs--twenty-three t-color--nine','Instituto Personnalité','fs--four t-color--five','Implantodontia e estética do sorriso.','fs--three', 'Instituto Personnalité é formada por uma equipe de dentistas experientes, focados e especializados em odontologia, nosso corpo clínico oferece diferentes áreas na odontologia, confira e veja abaixo nossas especialidades. Seja bem vindo.')
-
-      // +item('','assets/img/slide2.jpg','Slider2','fs--twenty-three t-color--five','Microscópio Especializado','fs--seven t-color--five','Endodontia','fs--three', 'Endodontia é a especialidade da odontologia responsável pelo estudo da polpa dentária, de todo o sistema de canais radiculares e dos tecidos periapicais, bem como das doenças que os afligem. Tudo guiado por computador.')
-
-      +item('','https://unsplash.it/2000/1500?random','Slider3','fs--twenty-three t-color--eight','Estética Oral','fs--seven t-color--eight','Botox','t-color--three fs--four', 'Renove seu sorriso, aumente sua autoestima! Oferecemos para pacientes com queija de sorriso assimétrico, sorriso gengival e alguns tipos de assimetrias faciais a toxina botulínica "botox". ')
-
-      +item('','https://unsplash.it/2000/1500?random','Slider4','fs--twenty-three t-color--five','Clínica Geral','fs--seven t-color--five','Encontre aqui seu Dentista','t-color--one fs--four', 'Com o clínico geral inicialmente irá esclarecer seus sintomas, ele tem uma visão global oferecendo o melhor caminho para sua saúde.')
+      +item('active','assets/img/slides/1.jpg','Slider1','','','','','', '')
+      +item('','assets/img/slides/2.jpg','Slider2','','','','','', '')
+      +item('','assets/img/slides/3.jpg','Slider3','','','','','', '')
+      +item('','assets/img/slides/4.jpg','Slider4','','','','','', '')
+      +item('','assets/img/slides/5.jpg','Slider5','','','','','', '')
+      +item('','assets/img/slides/6.jpg','Slider5','','','','','', '')
 
     // Controls
-    a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+    a.left.carousel-control(href='#carousel-personnalite', role='button', data-slide='prev')
       span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
       span.sr-only Previous
-    a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+    a.right.carousel-control(href='#carousel-personnalite', role='button', data-slide='next')
       span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
       span.sr-only Next
