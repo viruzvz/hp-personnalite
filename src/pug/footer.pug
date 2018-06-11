@@ -5,8 +5,8 @@ footer.b-color--three
         h2.fs--three.t-color--one Mapa do site
         +menu('list-unstyled','l-primary')
       .col-md-4.text-center
-        .c-top.c-bottom
-          a(href='http://www.personnaliteodontologia.com.br/'): img(src='assets/img/logoWhite.svg', alt='logo personnalite', style='width:150px; height:150px;')
+        iframe.c-bottom(src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Finstitutopersonnalitedf&tabs&width=340&height=180&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId', width='340', height='180', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true', allow='encrypted-media')
+
       .col-md-4.text-right
         div
           ul.pull-right.list-unstyled.nav.navbar-nav.head-menu.fs--three.s-uppercase.s-gutter-negative--right
@@ -17,7 +17,10 @@ footer.b-color--three
             li
               a
                 iframe(src='https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2Finstitutopersonnalitedf&layout=button_count&size=small&mobile_iframe=true&width=113&height=20&appId', width='113', height='20', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true', allow='encrypted-media')
-
+        #pixlee_container.c-bottom
+        script(type='text/javascript').
+          window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'dYfBjv79tOoNGgBljY5D'});Pixlee.addSimpleWidget({widgetId:'5333'});};
+        script(src='//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js')
   .footer--botton.b-color--two.t-color--one.c-box
     .container
       .row.fs--zero
