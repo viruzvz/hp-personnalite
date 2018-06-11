@@ -1,13 +1,23 @@
-hr
 footer.b-color--three
   .container
     .row
-      .col-md-6
+      .col-md-4
         h2.fs--three.t-color--one Mapa do site
         +menu('list-unstyled','l-primary')
-      .col-md-6.text-right
+      .col-md-4.text-center
         .c-top.c-bottom
           a(href='http://www.personnaliteodontologia.com.br/'): img(src='assets/img/logoWhite.svg', alt='logo personnalite', style='width:150px; height:150px;')
+      .col-md-4.text-right
+        div
+          ul.pull-right.list-unstyled.nav.navbar-nav.head-menu.fs--three.s-uppercase.s-gutter-negative--right
+            li
+              a.t-color--one(href='https://www.facebook.com/institutopersonnalitedf' title='Facebook' target='_blank'): i.fab.fa-facebook
+            li
+              a.t-color--one(href='https://www.instagram.com/institutopersonnalitedf/' title='Instagram' target='_blank'): i.fab.fa-instagram
+            li
+              a
+                iframe(src='https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2Finstitutopersonnalitedf&layout=button_count&size=small&mobile_iframe=true&width=113&height=20&appId', width='113', height='20', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true', allow='encrypted-media')
+
   .footer--botton.b-color--two.t-color--one.c-box
     .container
       .row.fs--zero

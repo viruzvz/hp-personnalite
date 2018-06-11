@@ -3,33 +3,32 @@ section.b-color--four.s-medium
   #carousel-personnalite.carousel.slide(data-ride='carousel')
     // Indicators
     ol.carousel-indicators.hidden-xs.s-indicators
-      li.active(data-target='#carousel-personnalite', data-slide-to='1')
+      li.active(data-target='#carousel-personnalite', data-slide-to='0')
+      li(data-target='#carousel-personnalite', data-slide-to='1')
       li(data-target='#carousel-personnalite', data-slide-to='2')
       li(data-target='#carousel-personnalite', data-slide-to='3')
       li(data-target='#carousel-personnalite', data-slide-to='4')
       li(data-target='#carousel-personnalite', data-slide-to='5')
-      li(data-target='#carousel-personnalite', data-slide-to='6')
     // Wrapper for slides
     .carousel-inner(role='listbox')
       mixin item(c1,c2,c3,c4,c44,c5,c55,color, texto)
         .item(class= c1)
           .Embed.Embed--16by9
             img.img-responsive(src= c2, alt= c3)
-          .carousel-caption.s-caption.hidden-xs
-            .text-left
-              h1(class= c4)
-                = c44
-                br
-                p(class= c5)
-                  = c55
+          .carousel-caption.hidden-xs
+            h1(class= c4)
+              = c44
+              br
+            p(class= c5)
+              = c55
             p(class= color).hidden-xs
               = texto
 
-      +item('active','assets/img/slides/1.jpg','Slider1','','','','','', '')
-      +item('','assets/img/slides/2.jpg','Slider2','','','','','', '')
-      +item('','assets/img/slides/3.jpg','Slider3','','','','','', '')
-      +item('','assets/img/slides/4.jpg','Slider4','','','','','', '')
-      +item('','assets/img/slides/5.jpg','Slider5','','','','','', '')
+      +item('active','assets/img/slides/1.jpg','Slider0','t-color--five fs--twenty-six','Seja bem vindo','t-color--one fs--eight','Instituto Personnalité','teste', 'Implantondontia, Endodontia, Ortodontia, Periodontia, Protese, Estética oral, Cirurgias, Clínica Geral')
+      +item('','assets/img/slides/2.jpg','Slider1','t-color--one fs--twenty-six','Instituto Personnalité','fs--seven','Implantodontia e estética do sorriso','', '')
+      +item('','assets/img/slides/3.jpg','Slider2','','','','','', '')
+      +item('','assets/img/slides/4.jpg','Slider3','','','','','', '')
+      +item('','assets/img/slides/5.jpg','Slider4','','','','','', '')
       +item('','assets/img/slides/6.jpg','Slider5','','','','','', '')
 
     // Controls

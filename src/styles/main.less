@@ -3,6 +3,7 @@
 @one:#fff;
 @one-offset:#f9f9f9;
 @two:#222;
+@two-offset:#444;
 @three:#666;
 @four:#eee;
 @five:#d1f4ff;
@@ -19,97 +20,6 @@ body {
 .topo {
   position: relative;
 }
-///////////////////////////////////////
-.s-uppercase {
-  text-transform: uppercase;
-}
-.br-top {
-  border-top: 5px solid @six;
-}
-/////////////////////////////////////// componente do tema para carousel bootstrap
-.s-indicators {
-  top:20px;
-  bottom: inherit;
-  li {
-    border: 3px solid @one;
-    background-color: @one;
-  }
-  .active {
-    background-color: @eight;
-  }
-}
-/////////////////////////////////////// componente especifico do tema
-.min-bar {
-  min-height: 135px;
-}
-.s-caption {
-  top:10%;
-}
-.colum-bar {
-  width: 30%;
-  height: 20px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  &:before {
-    content: '' !important;
-    position: absolute;
-    right: -20px;
-    height: 20px;
-    top: 0;
-    width: 20px;
-    -ms-transform: rotate(45deg);
-    transform: rotate(-90deg);
-    z-index: 1020;
-    background: linear-gradient(135deg, #fff 51%, transparent 51%);
-  }
-}
-/////////////////////////// Paralax
-.parallax {
-    /* The image used */
-    background-image: url("../assets/img/bg.jpg");
-
-    /* Set a specific height */
-    height: 400px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-////////////////////////// componente media
-.media-object {
-  max-width: 100px !important;
-}
-////////////////////////// embed
-.Embed {
-    position: relative;
-    display: block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-}
-.Embed--3by2 {
-    padding-bottom: 66.667%;
-}
-.Embed--16by9 {
-    padding-bottom: 35.600%;
-}
-////////////////////////// link control
-.l-primary {
-  color:@five;
-  &:hover {
-    color:@one;
-    text-decoration: none;
-  }
-}
-.l-nav {
-  color:@three;
-  &:hover {
-    color: @seven;
-  }
-}
 ////////////////////////// Classe de espaçamento de conteudos
 .s-small {margin-bottom: 5px;}
 .s-medium {margin-bottom: 15px;}
@@ -122,6 +32,8 @@ body {
 .t-color--one-offset {color: @one-offset;}
 .b-color--two {background-color: @two;}
 .t-color--two {color: @two;}
+.b-color--two-offset {background-color: @two-offset;}
+.t-color--two-offset {color: @two-offset;}
 .b-color--three {background-color: @three;}
 .t-color--three {color: @three;}
 .b-color--four {background-color: @four;}
@@ -182,6 +94,105 @@ body {
 .fs--twenty-three {font-size: 52px;}
 .fs--twenty-four{font-size: 54px;}
 .fs--twenty-five {font-size: 56px;}
+.fs--twenty-six {font-size: 66px;}
+///////////////////////////////////////
+.s-uppercase {
+  text-transform: uppercase;
+}
+.br-top {
+  border-top: 5px solid @six;
+}
+.height-default {
+  min-height: 500px;
+}
+/////////////////////////////////////// componente do tema para carousel bootstrap
+.s-indicators {
+  top:20px;
+  bottom: inherit;
+  li {
+    border: 3px solid @one;
+    background-color: @one;
+  }
+  .active {
+    background-color: @eight;
+  }
+}
+/////////////////////////////////////// componente especifico do tema
+.min-bar {
+  min-height: 135px;
+}
+.s-caption {
+  top:10%;
+}
+.colum-bar {
+  width: 30%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  &:before {
+    content: '' !important;
+    position: absolute;
+    right: -20px;
+    height: 20px;
+    top: 0;
+    width: 20px;
+    -ms-transform: rotate(45deg);
+    transform: rotate(-90deg);
+    z-index: 1020;
+    background: linear-gradient(135deg, #fff 51%, transparent 51%);
+  }
+}
+/////////////////////////// Paralax
+.parallax {
+    /* The image used */
+    
+    /* Set a specific height */
+    height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-img {
+    background-image: url("../assets/img/bg.jpg");
+}
+.parallax-img2 {
+    background-image: url("../assets/img/bg.jpg");
+}
+////////////////////////// componente media
+.media-object {
+  max-width: 100px !important;
+}
+////////////////////////// embed
+.Embed {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.Embed--3by2 {
+    padding-bottom: 66.667%;
+}
+.Embed--16by9 {
+    padding-bottom: 35.600%;
+}
+////////////////////////// link control
+.l-primary {
+  color:@five;
+  &:hover {
+    color:@one;
+    text-decoration: none;
+  }
+}
+.l-nav {
+  color:@three;
+  &:hover {
+    color: @seven;
+  }
+}
 /////////////////////// Line-height class
 .l--middle{
   line-height: 6.5;
