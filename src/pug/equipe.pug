@@ -3,19 +3,21 @@ mixin media(src, text, text2, classe)
 		.media.b-color--one-offset.c-box
 			.media-left
 				a(href='#')
-					img.media-object.img-circle.img-thumbnail(src=src)
+					img.media-object.img-circle.img-thumbnail(src=src style='width: 100px; height: 100px; object-fit:cover;')
 			.media-body
 				h4.media-heading.s-uppercase.t-color--seven: strong= text
 				em= text2
 			.text-right
 				a.btn.btn-success.btn-xs(data-toggle="modal" data-target=classe): i.fas.fa-plus-square &nbsp; Saiba mais
 
-+media('assets/img/thumbs/DrThales.png','Dr. Thales Brasil','Esp. Periodontia, Esp. Implantodontia, Mes. Implantodontia, Dou. Implantodontia, Consultor Científico em Biomateriais','.modal-thales')
-+media('assets/img/thumbs/DrJalusa.png','Dr(a). Jalusa Tassinari','Ortodontista','.modal-jalusa')
-+media('assets/img/thumbs/DrMaira.png','Dr(a). Maíra Mascarenhas','Clinico geral, atualização em endodontia, aperfeiçoamento em cirurgia oral menor.','.modal-maira')
-+media('assets/img/thumbs/DrThayse.png','Dr(a). Thayse','Especialista em prótese dentária.','.modal-thayse')
-+media('assets/img/thumbs/DrJoao.png','Dr. João Henrique','Clinico geral','.modal-joao')
-+media('assets/img/thumbs/DrRogerio.png','Dr. Rogerio Ariela','Especialista em endodontia.','.modal-rogerio')
++media('assets/img/equipe2018/DrThales.jpg','Dr. Thales Brasil','Esp. Periodontia, Esp. Implantodontia, Mes. Implantodontia, Dou. Implantodontia, Consultor Científico em Biomateriais','.modal-thales')
++media('assets/img/equipe2018/DrJalusa.png','Dr(a). Jalusa Tassinari','Ortodontista','.modal-jalusa')
++media('assets/img/equipe2018/DrMaira.jpg','Dr(a). Maíra Mascarenhas','Clinico geral, atualização em endodontia, aperfeiçoamento em cirurgia oral menor.','.modal-maira')
++media('assets/img/equipe2018/DrThayse.jpg','Dr(a). Thayse','Especialista em prótese dentária.','.modal-thayse')
++media('assets/img/equipe2018/DrJoao.jpg','Dr. João Henrique','Clinico geral','.modal-joao')
++media('assets/img/equipe2018/DrRogerio.jpg','Dr. Rogerio Ariela','Especialista em endodontia.','.modal-rogerio')
++media('assets/img/equipe2018/DrLarissa.jpg','Dr(a). Larissa Freire','Curso de extensāo DTM e Dor Orofacial no Centro da Dor Orofacial do GAAAC.','.modal-larissa')
++media('assets/img/equipe2018/DrIvanir.jpg','Dr. Ivanir Grecco','Especialista em cirurgia e traumatologia buco maxilo facial, realizado na São Leopoldo Mandic, Unidade Campinas.','.modal-ivanir')
 
 include modal/thales
 include modal/jalusa
@@ -23,3 +25,5 @@ include modal/maira
 include modal/thayse
 include modal/joao
 include modal/rogerio
+include modal/larissa
+include modal/ivanir
