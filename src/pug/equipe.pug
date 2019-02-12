@@ -5,21 +5,21 @@ mixin media(src, text, text2, classe)
 				a(href='#')
 					img.media-object.img-circle.img-thumbnail(src=src style='width: 100px; height: 100px; object-fit:cover;')
 			.media-body
-				h4.media-heading.s-uppercase.t-color--seven: strong= text
+				h4.media-heading.t-color--seven: strong= text
 				em= text2
 			.text-right
 				a.btn.btn-success.btn-xs(data-toggle="modal" data-target=classe): i.fas.fa-plus-square &nbsp; Saiba mais
 
-+media('assets/img/equipe2018/DrThales.jpg','Dr. Thales Brasil','Esp. Periodontia, Esp. Implantodontia, Mes. Implantodontia, Dou. Implantodontia, Consultor Científico em Biomateriais','.modal-thales')
-+media('assets/img/equipe2018/DrJalusa.png','Dr(a). Jalusa Tassinari','Ortodontista','.modal-jalusa')
-+media('assets/img/equipe2018/DrMaira.jpg','Dr(a). Maíra Mascarenhas','Clinico geral, atualização em endodontia, aperfeiçoamento em cirurgia oral menor.','.modal-maira')
-+media('assets/img/equipe2018/DrThayse.jpg','Dr(a). Thaise Cristina','Especialista em prótese dentária.','.modal-thayse')
-+media('assets/img/equipe2018/DrJoao.jpg','Dr. João Henrique Mascarenhas','Clinico geral','.modal-joao')
-+media('assets/img/equipe2018/DrRogerio.jpg','Dr. Rogerio Duarte','Especialista em endodontia.','.modal-rogerio')
-+media('assets/img/equipe2018/DrLarissa.jpg','Dr(a). Larissa Freire','Curso de extensāo DTM e Dor Orofacial no Centro da Dor Orofacial do GAAAC.','.modal-larissa')
-+media('assets/img/equipe2018/DrIvanir.jpg','Dr. Ivanir Grecco','Especialista em cirurgia e traumatologia buco maxilo facial, realizado na São Leopoldo Mandic, Unidade Campinas.','.modal-ivanir')
-+media('assets/img/equipe2018/DrCarolina.jpg','Dr(a). Carolina Toledo','Especializacao em Odontopediatria pela ABO.','.modal-carolina')
-+media('assets/img/equipe2018/DrIvanir.jpg','Dr. Ivanir Grecco','Especialista em cirurgia e traumatologia buco maxilo facial, realizado na São Leopoldo Mandic, Unidade Campinas.','.modal-ivanir')
++media('assets/img/equipe2018/DrThales.jpg','Dr. Thales Brasil','Doutorado em Implantodontia, Mestrado em Implantodontia, Especialista em Implantodontia, Especialista em Periodontia, Especialista em Cirurgia Oral menor, Consultor científico em Biomateriais, Diretor clinico Instituto Personnalité.','.modal-thales')
++media('assets/img/equipe2018/DrIvanir.jpg','Dr. Ivanir Grecco','Mestrado em Cirurgia Buco-Maxilo-Facial, Especialista em Cirurgia Buco-Maxilo-Facial, Professor de Cirurgia Buco-Maxilo-Facial da Unb, Cirurgião Cirurgia Buco-Maxilo-Facial do Hospital da Ceilândia. .    ','.modal-ivanir')
++media('assets/img/equipe2018/DrJalusa.png','Dra. Jalusa Tassinari','Especialista em Ortodontia, Especialista em saúde publica.','.modal-jalusa')
++media('assets/img/equipe2018/DrThayse.jpg','Dra. Thaise Cristina','Especialista em Prótese, Especialista em Odontologia Hospitalar Intensiva.','.modal-thayse')
++media('assets/img/equipe2018/DrRogerio.jpg','Dr. Rogerio Duarte','Especialista em Endodontia.','.modal-rogerio')
++media('assets/img/equipe2018/DrMaira.jpg','Dra. Maíra Mascarenhas','Especialização em Endodontia.','.modal-maira')
++media('assets/img/equipe2018/DrJoao.jpg','Dr. João Henrique Mascarenhas','Especialista em Prótese.','.modal-joao')
++media('assets/img/equipe2018/DrLarissa.jpg','Dra. Larissa Freire','Especialização em DTM e Dor Orofacial, Pós-Graduada em Harmonização Orofacial','.modal-larissa')
++media('assets/img/equipe2018/DrMayla.jpg','Dra. Mayla Ditzel','Especialização em Endodontia','.modal-mayla')
++media('assets/img/equipe2018/DrCarolina.jpg','Dra. Carolina Toledo','Especialização em Odontopediatria','.modal-carolina')
 
 include modal/thales
 include modal/jalusa
@@ -30,3 +30,4 @@ include modal/rogerio
 include modal/larissa
 include modal/ivanir
 include modal/carolina
+include modal/mayla
