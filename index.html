@@ -18,6 +18,7 @@
 </head>
 
 <body>
+        <div id="fb-root"></div>
     <header>
         <div class="b-color--three topo">
             <div class="colum-bar b-color--one">&nbsp;</div>
@@ -797,5 +798,11 @@
 </body>
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
-
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 </html>
