@@ -143,6 +143,77 @@ body {
     background: linear-gradient(135deg, #fff 51%, transparent 51%);
   }
 }
+/////////////////////////// FLEXBOX
+.card-hover {
+  &:hover {
+    .triangle-0 {
+      border-bottom: solid 30px @seven;
+      border-right: solid 30px @seven;
+    }
+  }
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.card-caption {
+  padding: 10px;
+}
+.card-box {
+  max-width: calc(30% - 1px);
+  margin-bottom: 30px;
+  background-color:@four;
+  margin-left:1px;
+  margin-right: 1px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.circle-absolut {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+.add-shadow {
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.triangle {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.triangle-0 {
+  transition: 0.5s ease-in;
+  width: 60px;
+  height: 60px;
+  border-bottom: solid 30px @five-offset;
+  border-right: solid 30px @five-offset;
+  border-left: solid 30px transparent;
+  border-top: solid 30px transparent;
+}
+.triangle-absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: -5px;
+}
+.text-more {
+  transform: rotate(-45deg);
+  line-height: 1;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #fff;
+  margin-left: -2px;
+  cursor: pointer;
+  a:hover {
+    color: greenyellow;
+    text-decoration: none;
+  }
+}
 /////////////////////////// Paralax
 .parallax {
     height: 400px; 
@@ -155,6 +226,9 @@ body {
 @media only screen and (max-device-width: 760px) {
     .parallax {
         background-attachment: scroll;
+    }
+    .card-box {
+      max-width: 100%;
     }
 }
 .center {
