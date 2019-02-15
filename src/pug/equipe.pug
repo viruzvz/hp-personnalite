@@ -1,191 +1,69 @@
 .col-md-12
+  .card
+    mixin card(data, src, src2, name, prof, prof1, prof2, prof3, prof4, prof5)
+      .card-box.card-hover
+        .Embed.Embed--3by2
+          .triangle.triangle-0.triangle-absolute
+            .text-more
+              a(class='btn-link' data-toggle="modal" data-target=data).t-color--one veja mais
+          .circle-absolut
+            img.media-object.img-circle.img-thumbnail.add-shadow.img-card(src=src)
+          a.pointer(class='btn-link' data-toggle="modal" data-target=data)
+            img.img-responsive(src=src2)  
+        .card-caption
+          p:strong.fs--four
+            = name
+          ul.list-unstyled
+            if prof
+              li
+                i.fa.fa-graduation-cap 
+                i  
+                  = prof
+            if prof1
+              li
+                i.fa.fa-graduation-cap 
+                i
+                  = prof1
+            if prof2
+              li
+                i.fa.fa-graduation-cap 
+                i  
+                  = prof2
+            if prof3
+              li
+                i.fa.fa-graduation-cap 
+                i  
+                  = prof3
+            if prof4
+              li
+                i.fa.fa-graduation-cap 
+                i  
+                  = prof4
+            if prof5
+              li
+                i.fa.fa-graduation-cap 
+                i  
+                  = prof5
 
-	.card
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrThales.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/1.jpg')
-			.card-caption
-				p: strong.fs--four.t-color--seven Dr. Thales Brasil
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Doutorado em Implantodontia
-					li 
-						i.fa.fa-graduation-cap 
-						i  Mestrado em Implantodontia
-					li 
-						i.fa.fa-graduation-cap 
-						i  Especialista em Implantodontia
-					li 
-						i.fa.fa-graduation-cap 
-						i  Especialista em Periodontia
-					li 
-						i.fa.fa-graduation-cap 
-						i  Especialista em Cirurgia Oral menor
-					li 
-						i.fa.fa-graduation-cap 
-						i  Consultor científico em Biomateriais
-					li 
-						i.fa.fa-graduation-cap 
-						i  Diretor clinico Instituto Personnalité
-				
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrIvanir.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/63.jpg')
-			.card-caption
-				p: strong.fs--four.t-color--seven Dr. Ivanir Grecco
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Mestrado em Cirurgia Buco-Maxilo-Facial
-					li 
-						i.fa.fa-graduation-cap 
-						i  Especialista em Cirurgia Buco-Maxilo-Facial
-					li 
-						i.fa.fa-graduation-cap 
-						i  Cirurgião Cirurgia Buco-Maxilo-Facial do Hospital da Ceilândia
-					li 
-						i.fa.fa-graduation-cap 
-						i  Professor de Cirurgia Buco-Maxilo-Facial da Unb
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrJalusa.png' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/64.jpg')
-			.card-caption
-				p: strong.fs--four.t-color--seven Dra. Jalusa Tassinari
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialista em Ortodontia
-					li 
-						i.fa.fa-graduation-cap 
-						i  Especialista em saúde publica
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrThayse.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/65.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dra. Thaise Cristina
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialista em Prótese
-					li 
-						i.fa.fa-graduation-cap 
-						i  Especialista em Odontologia Hospitalar Intensiva
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrRogerio.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/45.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dr. Rogerio Duarte
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialista em Endodontia.
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrMaira.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/6.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dra. Maíra Mascarenhas
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialização em Endodontia.
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrJoao.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/29.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dr. João Henrique Mascarenhas
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialista em Prótese.
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrLarissa.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/66.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dra. Larissa Freire
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialização em DTM e Dor Orofacial
-					li
-						i.fa.fa-graduation-cap 
-						i  Pós-Graduada em Harmonização Orofacial
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrMayla.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/52.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dra. Mayla Ditzel
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialização em Endodontia
-		.card-box
-			.Embed.Embed--3by2
-				.triangle.triangle-0.triangle-absolute
-					.text-more
-						a(class='btn-link' data-toggle="modal" data-target=".modal-thales").t-color--one veja mais
-				.circle-absolut
-					img.media-object.img-circle.img-thumbnail.add-shadow(src='assets/img/equipe2018/DrCarolina.jpg' style='width: 100px; height: 100px; object-fit:cover;')
-				img.img-responsive(src='assets/img/album2018/51.jpg')
-			.card-caption 
-				p: strong.fs--four.t-color--seven Dra. Carolina Toledo
-				ul.list-unstyled
-					li
-						i.fa.fa-graduation-cap 
-						i  Especialização em Odontopediatria
+    +card('.modal-thales','assets/img/equipe2018/DrThales.jpg', 'assets/img/album2018/1.jpg', 'Dr. Thales Brasil', 'Doutorado em Implantodontia', 'Mestrado em Implantodontia', 'Especialista em Implantodontia', 'Especialista em Periodontia', 'Especialista em Cirurgia Oral menor', 'Consultor científico em Biomateriais', 'Diretor clinico Instituto Personnalité')
+    +card('.modal-ivanir','assets/img/equipe2018/DrIvanir.jpg', 'assets/img/album2018/63.jpg', 'Dr. Ivanir Grecco', 'Mestrado em Cirurgia Buco-Maxilo-Facial', 'Especialista em Cirurgia Buco-Maxilo-Facial', 'Cirurgião Cirurgia Buco-Maxilo-Facial do Hospital da Ceilândia', 'Professor de Cirurgia Buco-Maxilo-Facial da Unb', '', '', '')
+    +card('.modal-jalusa','assets/img/equipe2018/DrJalusa.png', 'assets/img/album2018/64.jpg', 'Dra. Jalusa Tassinari', 'Especialista em Ortodontia', 'Especialista em saúde publica', '', '', '', '', '')
+    +card('.modal-thayse','assets/img/equipe2018/DrThayse.jpg', 'assets/img/album2018/65.jpg', 'Dra. Thaise Cristina', 'Especialista em Prótese', 'Especialista em Odontologia Hospitalar Intensiva', '', '', '', '', '')
+    +card('.modal-rogerio','assets/img/equipe2018/DrRogerio.jpg', 'assets/img/album2018/45.jpg', 'Dr. Rogerio Duarte', 'Especialista em Endodontia.', '', '', '', '', '', '')
+    +card('.modal-maira','assets/img/equipe2018/DrMaira.jpg', 'assets/img/album2018/6.jpg', 'Dra. Maíra Mascarenhas', 'Especialização em Endodontia.', '', '', '', '', '', '')
+    +card('.modal-joao','assets/img/equipe2018/DrJoao.jpg', 'assets/img/album2018/29.jpg', 'Dr. João Henrique Mascarenhas', 'Especialista em Prótese', '', '', '', '', '', '')
+    +card('.modal-larissa','assets/img/equipe2018/DrLarissa.jpg', 'assets/img/album2018/66.jpg', 'Dra. Larissa Freire', 'Especialização em DTM e Dor Orofacial', 'Pós-Graduada em Harmonização Orofacial', '', '', '', '', '')
+    +card('.modal-mayla','assets/img/equipe2018/DrMayla.jpg', 'assets/img/album2018/52.jpg', 'Dra. Mayla Ditzel', 'Especialização em Endodontia', '', '', '', '', '', '')
+    +card('.modal-carolina','assets/img/equipe2018/DrCarolina.jpg', 'assets/img/album2018/51.jpg', 'Dra. Carolina Toledo', 'Especialização em Odontopediatria', '', '', '', '', '', '')
+
 
 include modal/thales
-include modal/jalusa
-include modal/maira
-include modal/thayse
-include modal/joao
-include modal/rogerio
-include modal/larissa
 include modal/ivanir
+include modal/jalusa
+include modal/thayse
+include modal/rogerio
+include modal/maira
+include modal/joao
+include modal/larissa
 include modal/carolina
 include modal/mayla
