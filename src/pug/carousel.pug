@@ -14,10 +14,10 @@ section.b-color--four.s-medium.page-section
     .carousel-inner(role='listbox')
       mixin item(c1,c2,c3,c33,c4,c44,c5,c55,color, texto)
         .item(class= c1)
-          .Embed.Embed--16by9
+          .Embed.Embed--16by9.hidden-xs.hidden-sm
             img.img-responsive(src= c2, alt= c3)
           .carousel-caption
-            img(src= c33 width='300')
+            img.control-img(src= c33)
             h1(class= c4)
               = c44
               br

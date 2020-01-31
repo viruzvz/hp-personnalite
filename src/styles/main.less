@@ -439,6 +439,10 @@ now override the 3.3 new styles for modern browsers & apply opacity
   margin-left: -2px;
   cursor: pointer;
 }
+.control-img {
+  max-width: 300px;
+  max-height: 300px;
+}
 /////////////////////////// Paralax
 .parallax {
     height: 400px; 
@@ -449,11 +453,19 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-width: 1200px) {
+  .control-img {
+    max-width: 150px;
+    max-height: 150px;
+  }
   #carousel-personnalite {
     .carousel-caption {
       position: initial;
       background-color: @seven;
+      padding: 15px;
     }
+  }
+  .fs--twenty-six {
+    font-size: 40px;
   }
     .parallax {
         background-attachment: scroll;
