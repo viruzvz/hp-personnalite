@@ -2,30 +2,30 @@ extends index
 block content
   include pug/topo
   include pug/carousel
-
-  section.s-large(role='Especialidades')
-    .container
+  section.s-large.page-section(role='Especialidades')
+    .container.c-top.c-bottom#especialidades
       .row
         .col-md-12
-          h2.s-uppercase.t-color--seven
+          h2.c-bottom.s-uppercase.text-center.t-color--seven
             strong Especialidades
         include pug/especialidades
 
   section(role='Paralax')
     .parallax.parallax-img2
       .center
-        h2.s-uppercase.t-color--seven.fs--twenty-six
+        img(src='../assets/img/dentist05.svg' style='opacity:0.4')
+        h2.c-bottom.s-uppercase.text-center.t-color--one.fs--twenty-six.add-text-shadow
           strong Botox
-        p.t-color--two.fs--six
+        p.t-color--one.fs--seven.add-text-shadow
           | Estética Oral
-        p.t-color--two.fs--four.text-center
+        p.t-color--one.fs--seven.text-center.add-text-shadow
           | Renove seu sorriso, aumente sua autoestima! Oferecemos para pacientes com queija de sorriso assimétrico, sorriso gengival e alguns tipos de assimetrias faciais a toxina botulínica "botox".
 
-  section(role='Equipe')
-    .container
+  section.page-section(role='Equipe')
+    .container.c-top.c-bottom#equipe
       .row
         .col-md-12
-          h2.s-uppercase.t-color--seven
+          h2.c-bottom.s-uppercase.text-center.t-color--seven
             strong Equipe
         include pug/equipe
 
@@ -34,6 +34,7 @@ block content
       .center
         img(src='assets/img/logoWhite.svg')
   include pug/convenios
-  include pug/redessociais
+  include pug/galeria
+  include pug/depoimentos
   include pug/contatos
   include pug/footer

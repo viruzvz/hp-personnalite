@@ -1,7 +1,7 @@
 .col-md-12
   .card
     mixin card(data, src, src2, name, prof, prof1, prof2, prof3, prof4, prof5)
-      .card-box.card-hover
+      .card-box.card-hover.animation-element.slide-left.in-view
         .Embed.Embed--3by2
           .triangle.triangle-0.triangle-absolute
             .text-more
@@ -55,6 +55,7 @@
     +card('.modal-larissa','assets/img/equipe2018/DrLarissa.jpg', 'assets/img/album2018/66.jpg', 'Dra. Larissa Freire', 'Especialização em DTM e Dor Orofacial.', 'Pós-Graduada em Harmonização Orofacial.', '', '', '', '', '')
     +card('.modal-mayla','assets/img/equipe2018/DrMayla.jpg', 'assets/img/album2018/52.jpg', 'Dra. Mayla Ditzel', 'Especialização em Endodontia.', '', '', '', '', '', '')
     +card('.modal-carolina','assets/img/equipe2018/DrCarolina.jpg', 'assets/img/album2018/51.jpg', 'Dra. Carolina Toledo', 'Especialização em Odontopediatria.', '', '', '', '', '', '')
+    +card('','assets/img/equipe2018/DrLuiz.jpg', 'assets/img/album2018/67.jpg', 'Dr. Luís Augusto', 'Pós graduado em cirurgia oral menor.', 'Cro-df 13.081', '', '', '', '', '')
 
 
 include modal/thales

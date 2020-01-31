@@ -1,0 +1,13 @@
+mixin menu(classe, link)
+  ul(class!=classe)
+    li.nav-item
+      a.active(class!=link, href="#sobre"): strong Sobre
+    li.nav-item
+      a(class!=link, href="#especialidades"): strong Especialidades
+    li.nav-item
+      a(class!=link, href="#equipe"): strong Equipe
+    li.nav-item
+      a(class!=link, href="#contatos"): strong Contatos
+
+
++menu('nav navbar-nav head-menu fs--two s-uppercase','l-transition--default')

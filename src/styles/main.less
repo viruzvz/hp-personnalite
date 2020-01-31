@@ -1,4 +1,5 @@
 @import 'vendors/bootstrap';
+@import "~ekko-lightbox/ekko-lightbox.less";
 
 @one:#fff;
 @one-offset:#f9f9f9;
@@ -13,6 +14,7 @@
 @eight:#af499f;
 @nine:#af499f;
 @space-default:10px;
+@whatsapp:#189d0e;
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -50,6 +52,9 @@ body {
 .t-color--eight {color: @eight;}
 .b-color--nine {background-color: @nine;}
 .t-color--nine {color: @nine;}
+.b-color--whatsapp {background-color: @whatsapp}
+.t-color--whatsapp {color: @whatsapp}
+
 /////////////////////////////////////// componente gradient background
 .b-gradient--primary {background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 40%,rgba(238,238,238,1) 40%,rgba(238,238,238,1) 40%,rgba(238,238,238,1) 100%);}
 .b-gradient--secundary {background: linear-gradient(to bottom, rgba(209,244,255,1) 0%,rgba(209,244,255,1) 71%,rgba(255,255,255,1) 71%,rgba(255,255,255,1) 100%);}
@@ -61,7 +66,7 @@ body {
 .br-hard {border-radius: 15px;}
 ////////////////////////// componente de espaçamentos
 .c-top {padding-top: @space-default;}
-.c-bottom {padding-bottom: 8px;}
+.c-bottom {padding-bottom: @space-default;}
 .c-right {padding-right: @space-default;}
 .c-left {padding-left: @space-default;}
 .c-box {padding: @space-default;}
@@ -69,6 +74,7 @@ body {
 .c-nospace {margin: 0;}
 .c-box--content {border: 1px solid @six;}
 .c-box--content--b {border-bottom: 1px solid @six;}
+.c-box--img--b{border: 3px solid @one;}
 ////////////////////////// componente de tamanho de fontes
 .fs--zero {font-size: 10px;}
 .fs--one{font-size: 12px;}
@@ -96,6 +102,81 @@ body {
 .fs--twenty-five {font-size: 56px;}
 .fs--twenty-six {font-size: 66px;}
 ///////////////////////////////////////
+.l-transition--default {
+  transition: all .2s;
+  color:@two-offset;
+  &:hover{
+    color:@seven;
+    text-decoration: none;
+  }
+}
+.l-transition--whatszap {
+  transition: all .2s;
+  color:@whatsapp;
+  &:hover{
+    color:@seven;
+    text-decoration: none;
+  }
+}
+//////////////////////////////////////
+.animation-element {
+	opacity: 0;
+	position: relative;
+}
+.animation-element.slide-left {
+transform: translate3d(-100px, 0px, 0px);
+transition: all 500ms linear;
+opacity: 0;
+}
+.animation-element.slide-left.in-view {
+opacity: 1;
+transform: translate3d(0px, 0px, 0px);
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.theme {
+	.active {
+		color:@seven !important;
+		border-bottom: 5px solid @seven
+	}
+}
+#button {
+	display: inline-block;
+	background-color: @seven;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	&:hover {
+		cursor: pointer;
+		background-color: #333;
+	}
+  }
+  .transition {
+	transition: background-color .3s, 
+	opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+  }
+  .transition:active {
+	background-color: #555;
+  }
+.position-fixed--w100 {
+  position: fixed;
+  top:0;
+  width: 100%;;
+}
+  .show {
+	opacity: 1;
+	visibility: visible;
+  }
+//////////////////////////////////////
 .s-uppercase {
   text-transform: uppercase;
 }
@@ -110,13 +191,137 @@ body {
   top:20px;
   bottom: inherit;
   li {
-    border: 3px solid @one;
-    background-color: @one;
+    border: 1px solid @one;
+    background-color: @five-offset;
   }
   .active {
-    background-color: @eight;
+    background-color: @one;
   }
 }
+
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+https://stackoverflow.com/questions/26770055/bootstrap-carousel-fade-no-longer-working-with-maxcdn-3-3-bootstrap-min-css
+*/
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+.carousel-fade {
+	.carousel-inner {
+		.item {
+			opacity: 0;
+			transition-property: opacity;
+			transition-duration: 1s;
+			transition-timing-function: linear;
+		}
+		.active {
+			opacity: 1;
+		}
+		.active.left {
+			left: 0;
+			opacity: 0;
+			z-index: 1;
+		}
+		.active.right {
+			left: 0;
+			opacity: 0;
+			z-index: 1;
+		}
+		.next.left {
+			opacity: 1;
+		}
+		.prev.right {
+			opacity: 1;
+		}
+	}
+	.carousel-control {
+		z-index: 2;
+	}
+}
+@media all and (transform-3d) {
+	.carousel-fade {
+		.carousel-inner {
+			>.item.next {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.active.right {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.prev {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.active.left {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.next.left {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.prev.right {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.active {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+}
+@media (-webkit-transform-3d) {
+	.carousel-fade {
+		.carousel-inner {
+			>.item.next {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.active.right {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.prev {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.active.left {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.next.left {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.prev.right {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			>.item.active {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+}
+
 /////////////////////////////////////// componente especifico do tema
 .min-bar {
   min-height: 135px;
@@ -201,6 +406,9 @@ body {
 .add-shadow {
   box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }
+.add-text-shadow {
+  text-shadow: 1px 1px 4px #000;
+}
 .triangle {
   display: inline-block;
   margin: 0 5px;
@@ -240,9 +448,16 @@ body {
     background-size: cover;
 }
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1200px) {
+  #carousel-personnalite {
+    .carousel-caption {
+      position: initial;
+      background-color: @seven;
+    }
+  }
     .parallax {
         background-attachment: scroll;
+        height: 700px;
     }
     .card-box {
       max-width: 100%;
@@ -307,7 +522,111 @@ body {
 .l--middle{
   line-height: 6.5;
 }
+//////////////////////////FLEX BOX
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-content-start {
+  justify-content: flex-start;
+}
+///////////////////////////////////// img responsive
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/////////////////////////////////// Social
+.depoimentos {
+  padding: 50px 0;
+}
+#social-carousel {
+  .carousel-inner {
+    .item {
 
+    }
+  }
+  .carousel-control.left, .carousel-control.right {
+    background-image: none;
+  }
+}
+
+/////////////////////////////////// galeria
+.mosaic-margin > :last-child { margin-left: 0 !important; margin-right: 0 !important; }
+.content {
+	position: relative;
+	width: calc(20% - 1px);
+	//margin: auto;
+	overflow: hidden;
+	.content-overlay {
+		background: rgba(77, 43, 57, 0.7);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		opacity: 0;
+		transition: all 0.4s ease-in-out 0s;
+	  }
+	  &:hover {
+		.content-overlay{
+			opacity: 1;
+		}
+		.content-details{
+			top: 50%;
+			left: 50%;
+			opacity: 1;
+		}
+	  }
+  }
+  .content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: all 0.3s ease-in-out 0s;
+	h3{
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.15em;
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	  }
+	  p{
+		color: #fff;
+		font-size: 0.8em;
+	  }
+  }
+  
+  .fadeIn-bottom{
+	top: 80%;
+  }
+  
+  .fadeIn-top{
+	top: 20%;
+  }
+  
+  .fadeIn-left{
+	left: 20%;
+  }
+  
+  .fadeIn-right{
+	left: 80%;
+  }
+.embed {
+  overflow: hidden;
+  max-height: 250px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
 
 @media (max-width: @screen-xs-max) {
   .l--middle{

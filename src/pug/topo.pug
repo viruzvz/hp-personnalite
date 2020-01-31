@@ -1,4 +1,6 @@
 header
+  .position-fixed--w100.transition.theme.navsec
+    include nav-sec.pug
   .b-color--three.topo
     .colum-bar.b-color--one
       | &nbsp;
@@ -22,37 +24,20 @@ header
           span.fas.fa-map-marker
           span  ASA NORTE-DF &nbsp; &nbsp;
           span.fas.fa-phone-square
-          a(href='tel:(61) 3349-8153')  (61) 3349-8153 &nbsp;
+          a.l-transition--default(href='tel:(61) 3349-8153')  (61) 3349-8153 &nbsp;
           span.fas.fa-phone-square
-          a(href='tel:(61) 3447-6071')  (61) 3447-6071
-  .container
+          a.l-transition--default(href='tel:(61) 3447-6071')  (61) 3447-6071 &nbsp;
+          strong.fs--four
+            a.l-transition--whatszap(href='https://wa.me/5561982463555')  
+              span.fab.fa-whatsapp-square &nbsp;
+              span (61) 982463555 (whatsapp)
+  .container.hidden-xs
     nav.navbar.c-nospace
       .row
-        .navbar-header
-          button.navbar-toggle.collapsed.b-color--seven(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-            span.b-color--one.sr-only Toggle navigation
-            span.b-color--one.icon-bar
-            span.b-color--one.icon-bar
-            span.b-color--one.icon-bar
-
-        #navbar.navbar-collapse.collapse
-          mixin menu(classe, link)
-            ul(class!=classe)
-              li
-                a.hvr-underline-reveal(class!=link, href="index.html"): strong Início
-              li
-                a.hvr-underline-reveal(class!=link, href="sobre.html"): strong Sobre
-              li
-                a.hvr-underline-reveal(class!=link, href="especialidades.html"): strong Especialidades
-              li
-                a.hvr-underline-reveal(class!=link, href="equipe.html"): strong Equipe
-              li
-                a.hvr-underline-reveal(class!=link, href="contatos.html"): strong Contatos
-
-
-          +menu('nav navbar-nav head-menu fs--two s-uppercase','l-nav')
+        #navbar.theme
+          include nav.pug
           ul.pull-right.list-unstyled.nav.navbar-nav.head-menu.fs--three.s-uppercase.s-gutter-negative--right
             li
-              a(href='https://www.facebook.com/institutopersonnalitedf' title='Facebook' target='_blank'): i.fab.fa-facebook
+              a.l-transition--default(href='https://www.facebook.com/institutopersonnalitedf' title='Facebook' target='_blank'): i.fab.fa-facebook
             li
-              a(href='https://www.instagram.com/institutopersonnalitedf/' title='Instagram' target='_blank'): i.fab.fa-instagram
+              a.l-transition--default(href='https://www.instagram.com/institutopersonnalitedf/' title='Instagram' target='_blank'): i.fab.fa-instagram
