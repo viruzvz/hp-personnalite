@@ -110,6 +110,22 @@ body {
     text-decoration: none;
   }
 }
+.l-transition--primary {
+  transition: all .2s;
+  color:#ccc;
+  &:hover{
+    color:@one;
+    text-decoration: none;
+  }
+}
+.l-transition--secondary {
+  transition: all .2s;
+  color:@seven;
+  &:hover{
+    color:@eight;
+    text-decoration: none;
+  }
+}
 .l-transition--whatszap {
   transition: all .2s;
   color:@whatsapp;
@@ -158,7 +174,7 @@ transform: translate3d(0px, 0px, 0px);
 	}
   }
   .transition {
-	transition: background-color .3s, 
+	transition: background-color .3s,
 	opacity .5s, visibility .5s;
 	opacity: 0;
 	visibility: hidden;
@@ -200,7 +216,7 @@ transform: translate3d(0px, 0px, 0px);
 }
 
 /*
-inspired from http://codepen.io/Rowno/pen/Afykb 
+inspired from http://codepen.io/Rowno/pen/Afykb
 https://stackoverflow.com/questions/26770055/bootstrap-carousel-fade-no-longer-working-with-maxcdn-3-3-bootstrap-min-css
 */
 /*
@@ -445,7 +461,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 /////////////////////////// Paralax
 .parallax {
-    height: 400px; 
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -617,19 +633,19 @@ now override the 3.3 new styles for modern browsers & apply opacity
 		font-size: 0.8em;
 	  }
   }
-  
+
   .fadeIn-bottom{
 	top: 80%;
   }
-  
+
   .fadeIn-top{
 	top: 20%;
   }
-  
+
   .fadeIn-left{
 	left: 20%;
   }
-  
+
   .fadeIn-right{
 	left: 80%;
   }

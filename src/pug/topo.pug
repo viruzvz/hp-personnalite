@@ -1,43 +1,69 @@
 header
   .position-fixed--w100.transition.theme.navsec
     include nav-sec.pug
-  .b-color--three.topo
-    .colum-bar.b-color--one
-      | &nbsp;
-    .container
+  .b-color--three.topo.hidden-xs.hidden-sm
+    .container-fluid
       .row
         .col-md-12.c-top.c-bottom
-          .row
-            .col-md-10.col-sm-10.text-right.t-color--one.fs--one
+          ul.c-nospace.list-unstyled.list-inline
+            li.list-inline-item
+              a.l-transition--primary(href='tel:(61) 33498153')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 3349-8153
+            li.list-inline-item
+              a.l-transition--primary(href='tel:(61) 34476071')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 3447-6071
+            li.list-inline-item
+              a.l-transition--primary(href='tel:(61) 981613555')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 98161-3555
+            li.list-inline-item
+              a.l-transition--primary(href='tel:(61) 983458555')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 98345-8555
+            li.list-inline-item
+              a.l-transition--primary(href='tel:(61) 982640555')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 98264-0555
+            li.list-inline-item
+              a.l-transition--primary(href='tel:(61) 982463555')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 98246-3555
+            li.list-inline-item
+              a.l-transition--primary(href='https://wa.me/5561982463555')
+                spam.glyphicon.glyphicon-phone-alt &nbsp;
+                | 98246-3555 (Whatsapp)
+            li.t-color--one
               span.fas.fa-clock
               |  Segunda a sexta de 08h00 às 19h00. Sábados de 08h00 às 12h00
-            .col-md-2.col-sm-2.text-right
+            li.t-color--one
               a(href="https://webmail.ultramail.com.br/" target='_blank').fs--zero.l-primary
                 span.fas.fa-envelope-square
                 |  WEBMAIL
+          //- .row
+          //-   .col-md-10.col-sm-10.text-right.t-color--one.fs--one
+          //-     span.fas.fa-clock
+          //-     |  Segunda a sexta de 08h00 às 19h00. Sábados de 08h00 às 12h00
+          //-   .col-md-2.col-sm-2.text-right
+          //-     a(href="https://webmail.ultramail.com.br/" target='_blank').fs--zero.l-primary
+          //-       span.fas.fa-envelope-square
+          //-       |  WEBMAIL
   .c-box--content--b
     .container.c-bottom.c-top
       .row
-        .col-md-4
+        .col-md-12.text-center
           a(href='http://www.personnaliteodontologia.com.br/'): img(src='assets/img/logo.svg')
-        .col-md-8.text-right.fs--one.l--middle.t-color--three.c-top
-          span.fas.fa-map-marker
-          span  ASA NORTE-DF &nbsp; &nbsp;
-          span.fas.fa-phone-square
-          a.l-transition--default(href='tel:(61) 3349-8153')  (61) 3349-8153 &nbsp;
-          span.fas.fa-phone-square
-          a.l-transition--default(href='tel:(61) 3447-6071')  (61) 3447-6071 &nbsp;
-          strong.fs--four
-            a.l-transition--whatszap(href='https://wa.me/5561982463555')  
-              span.fab.fa-whatsapp-square &nbsp;
-              span (61) 982463555 (whatsapp)
+
+
   .container.hidden-xs
     nav.navbar.c-nospace
       .row
-        #navbar.theme
-          include nav.pug
-          ul.pull-right.list-unstyled.nav.navbar-nav.head-menu.fs--three.s-uppercase.s-gutter-negative--right
-            li
-              a.l-transition--default(href='https://www.facebook.com/institutopersonnalitedf' title='Facebook' target='_blank'): i.fab.fa-facebook
-            li
-              a.l-transition--default(href='https://www.instagram.com/institutopersonnalitedf/' title='Instagram' target='_blank'): i.fab.fa-instagram
+        .col-md-12
+          #navbar.theme
+            include nav.pug
+            ul.pull-right.list-unstyled.nav.navbar-nav.head-menu.fs--three.s-uppercase.s-gutter-negative--right
+              li
+                a.l-transition--secondary(href='https://www.facebook.com/institutopersonnalitedf' title='Facebook' target='_blank'): i.fab.fa-facebook
+              li
+                a.l-transition--secondary(href='https://www.instagram.com/institutopersonnalitedf/' title='Instagram' target='_blank'): i.fab.fa-instagram
