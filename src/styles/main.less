@@ -113,6 +113,7 @@ body {
 .l-transition--primary {
   transition: all .2s;
   color:#ccc;
+  font-size: 12px;
   &:hover{
     color:@one;
     text-decoration: none;
@@ -461,11 +462,12 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 /////////////////////////// Paralax
 .parallax {
-    height: 400px;
+    height: 600px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-width: 1200px) {
@@ -674,4 +676,147 @@ now override the 3.3 new styles for modern browsers & apply opacity
     padding-bottom: inherit;
     background-color: @two;
   }
+}
+
+.media-img {
+  border: 1px solid #480e3f; 
+  border-radius: 50%;
+  width: 80px;
+}
+
+.media-space {
+  margin-bottom: 30px;
+}
+
+.media-title {
+  font-size: 20px;
+  color: #480e3f;
+}
+
+.title--hero {
+  font-size: 60px;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-weight: bold;
+  @media (max-width: @screen-xs-max) {
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+.subtitle--hero {
+  font-size: 40px;
+  color: white;
+  @media (max-width: @screen-xs-max) {
+    font-size: 20px;
+    
+  }
+}
+
+.hero--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.hero {
+  height: 630px;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-head {
+  display: flex;
+  align-items: center;
+  min-height: 130px;
+  background-color: hsla(35, 95%, 59%, 0.8);
+}
+
+.hero-body {
+  display: flex;
+  align-items: center;
+}
+
+.hero-item2 {
+  background-image: url();
+}
+
+.hero-item {
+  background-image: url('../assets/img/hero.jpg');
+}
+
+.setsubbackground {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 700px;
+  height: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.videos {
+  background-color: #444;
+  h2 {
+    color: #fff;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.convenios, .depoimentos {
+  h2 {
+    color: #fff;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.link-equipe {
+  img {
+    background-color: transparent;
+  }
+
+  img:hover {
+    background-color: @seven;
+  }
+}
+
+.freepik {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 12px;
 }

@@ -1,23 +1,63 @@
 {
-  "name": "hp-personnalite",
-  "version": "0.0.1",
+  "name": "carlos-vz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
   "scripts": {
-    "dev": "mosaaaico2 dev",
-    "build": "mosaaaico2 build",
-    "start": "serve dist",
-    "prestart": "npm run build"
+    "build": "webpack --mode=production --progress",
+    "dev": "webpack serve --mode=development --progress"
   },
+  "author": "carlos neri",
+  "license": "ISC",
   "devDependencies": {
-    "mosaaaico2": "fabianonunes/mosaaaico2"
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.12.1",
+    "autoprefixer": "^10.0.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.0",
+    "core-js": "^3.18.3",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.1.5",
+    "file-loader": "^6.2.0",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^4.5.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "mini-css-extract-plugin": "^1.2.1",
+    "node-sass": "^5.0.0",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.1.6",
+    "postcss-loader": "^4.0.4",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass-loader": "^10.0.5",
+    "standard": "^12.0.1",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "webpack": "^5.4.0",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.5",
     "ekko-lightbox": "^5.3.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^2.1.4",
+    "jquery": "^3.6.0",
+    "jquery-bridget": "^3.0.0",
     "jquery-touchswipe": "^1.6.19",
+    "jquery-ui": "^1.13.0",
+    "jquery-ui-dist": "^1.12.1",
     "serve": "^2.0.0",
     "stickyfill": "^1.1.1-strict",
     "stickyfilljs": "^2.1.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }

@@ -1,38 +1,54 @@
 extends index
+mixin videos(src)
+  .col-md-6
+    .embed-responsive.embed-responsive-16by9
+      iframe.embed-responsive-item(src=src)
 block content
-  include pug/topo
-  include pug/carousel
-  section.s-large.page-section.c-box(role='Especialidades')
-    .container.c-top.c-bottom#especialidades
+  header#home.page-section
+    include pug/topo
+    include pug/hero
+
+  section#especialidades.s-large.page-section(role='Especialidades')
+    .container
       .row
         .col-md-12
-          h2.c-bottom.s-uppercase.text-center.t-color--seven
+          h2.c-bottom.s-uppercase.text-center.t-color--seven.s-large
             strong Especialidades
         include pug/especialidades
 
-  section(role='Paralax')
+  figure(role='Paralax')
     .parallax.parallax-img2
       .center
-        img.hidden-xs.hidden-sm(src='../assets/img/dentist05.svg' style='opacity:0.4')
+        //- img.hidden-xs.hidden-sm(src='../assets/img/dentist05.svg' style='opacity:0.4')
         h2.c-bottom.s-uppercase.text-center.t-color--one.fs--twenty-six.add-text-shadow
           strong Botox
         p.t-color--one.fs--seven.add-text-shadow
           | Estética Oral
         p.t-color--one.fs--seven.text-center.add-text-shadow
           | Renove seu sorriso, aumente sua autoestima! Oferecemos para pacientes com queija de sorriso assimétrico, sorriso gengival e alguns tipos de assimetrias faciais a toxina botulínica "botox".
+        a.freepik(href='https://br.freepik.com/fotos/mulher') Mulher foto criado por freepik - br.freepik.com
 
-  section.page-section.c-box(role='Equipe')
-    .container.c-top.c-bottom#equipe
+  section.videos(role='Videos')
+    .container
+      .row
+        h2.s-uppercase.text-center.s-large Antes e Depois
+        p.text-center.t-color--one Estética do sorriso
+        +videos('https://www.youtube.com/embed/QYsOZuw81Dw')
+        +videos('https://www.youtube.com/embed/QmDI3a7IrCc')
+
+  section.page-section#equipe(role='Equipe')
+    .container
       .row
         .col-md-12
-          h2.c-bottom.s-uppercase.text-center.t-color--seven
+          h2.c-bottom.s-uppercase.text-center.t-color--seven.s-large
             strong Equipe
         include pug/equipe
 
-  section(role='Paralax')
+  figure(role='Paralax')
     .parallax.parallax-img
       .center
         img(src='assets/img/logoWhite.svg')
+
   include pug/convenios
   include pug/galeria
   include pug/depoimentos

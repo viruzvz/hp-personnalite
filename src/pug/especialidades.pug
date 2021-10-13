@@ -1,9 +1,12 @@
 mixin col-md-3(img, text, text2)
   .col-md-3
-    .b-gradient--primary.text-center.s-medium.animation-element.slide-left.in-view
-      img(src=img style='max-width:30%')
-      p.t-color--three.fs--eight= text
-      small.br-easy.b-color--six.c-box.t-color--two= text2
+    .media.media-space
+      .media-left
+        img.media-img(src=img)
+      .media-body
+        h4.media-heading.media-title
+          = text
+        = text2
 +col-md-3('assets/img/dentist01.svg','Implantondontia', 'Guiado por computador')
 +col-md-3('assets/img/dentist02.svg','Endodontia', 'Com microscópio')
 +col-md-3('assets/img/dentist03.svg','Ortodontia', 'Aparelhos estéticos de porcelana')

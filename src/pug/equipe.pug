@@ -1,70 +1,31 @@
-.col-md-12
-  .card
-    mixin card(data, src, src2, name, prof, prof1, prof2, prof3, prof4, prof5, prof6)
-      .card-box.card-hover.animation-element.slide-left.in-view
-        .Embed.Embed--3by2
-          .triangle.triangle-0.triangle-absolute
-            .text-more
-              a(class='btn-link' data-toggle="modal" data-target=data).t-color--one veja mais
-          .circle-absolut
-            img.media-object.img-circle.img-thumbnail.add-shadow.img-card(src=src)
-          a.pointer(class='btn-link' data-toggle="modal" data-target=data)
-            img.img-responsive(src=src2)
-        .card-caption
-          p:strong.fs--four
-            = name
-          ul.list-unstyled
-            if prof
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof
-            if prof1
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof1
-            if prof2
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof2
-            if prof3
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof3
-            if prof4
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof4
-            if prof5
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof5
-            if prof6
-              li
-                i.fa.fa-graduation-cap
-                i
-                  = prof6
+mixin col-md-3(data, img, text, text2)
+  .col-md-3
+    .media.media-space
+      .media-left
+        a.link-equipe(href="#" data-toggle="modal" data-target=data title="Currículo Completo")
+          img.media-object.img-circle.img-thumbnail.img-card(src=img)
+      .media-body
+        h4.media-heading.media-title
+          = text
+        = text2
++col-md-3('.modal-thales','assets/img/equipe2018/DrThales.jpg','Dr. Thales Brasil', 'CEO')
++col-md-3('.modal-ivanir','assets/img/equipe2018/DrIvanir.jpg','Dr. Ivanir Grecco', 'Buco-Maxilo-Facial')
++col-md-3('.modal-jalusa','assets/img/equipe2018/DrJalusa.png','Dra. Jalusa Tassinari', 'Ortodontia')
++col-md-3('.modal-thayse','assets/img/equipe2018/DrThayse.jpg','Dra. Thaise Cristina', 'Prótese')
+//- +col-md-3('','assets/img/equipe2018/DrJaqueline.jpg','Dra. Jaqueline Garcia', 'Clinica Geral')
 
-    +card('.modal-thales','assets/img/equipe2018/DrThales.jpg', 'assets/img/album2018/1.jpg', 'Dr. Thales Brasil', 'Doutorado em Implantodontia.', 'Mestrado em Implantodontia.', 'Especialista em Implantodontia.', 'Especialista em Periodontia.', 'Especialista em Cirurgia Oral avançada.', 'Consultor Científico em Biomateriais.', 'Pós graduado em Ozonioterapia.','')
-    +card('.modal-ivanir','assets/img/equipe2018/DrIvanir.jpg', 'assets/img/album2018/63.jpg', 'Dr. Ivanir Grecco', 'Mestrado em Cirurgia Buco-Maxilo-Facial', 'Especialista em Cirurgia Buco-Maxilo-Facial.', 'Cirurgião Buco-Maxilo-Facial do Hospital Regional da Ceilândia.', 'Professor de Cirurgia Buco-Maxilo-Facial da Unb.', '', '', '','')
-    +card('.modal-jalusa','assets/img/equipe2018/DrJalusa.png', 'assets/img/album2018/64.jpg', 'Dra. Jalusa Tassinari', 'Especialista em Ortodontia.', 'Especialista em Saúde Pública.', '', '', '', '', '','')
-    +card('.modal-thayse','assets/img/equipe2018/DrThayse.jpg', 'assets/img/album2018/65.jpg', 'Dra. Thaise Cristina', 'Especialista em Prótese.', 'Especialista em Odontologia Hospitalar Intensiva.', '', '', '', '', '','')
-    +card('.','assets/img/equipe2018/DrJaqueline.jpg', 'assets/img/album2018/70.jpg', 'Dra. Jaqueline Garcia', 'Clinica Geral.', '', '', '', '', '', '','')
-    +card('.modal-maira','assets/img/equipe2018/DrMaira.jpg', 'assets/img/album2018/6.jpg', 'Dra. Maíra Mascarenhas', 'Especialista em Endodontia.', '', '', '', '', '', '','')
-    +card('','assets/img/equipe2018/DrMarcella.jpg', 'assets/img/album2018/69.jpg', 'Dra. Marcella Meirelles', 'Especialista em Ortodontia.', 'Especialista em Harmonização-Oro-Facial', 'Pós-Graduada em Harmonização-Oro-Facial', 'Pós-Graduada em Ozonioterapia', 'Professora da Especialização em Harmonização-Oro-Facial do Instituo Aria', '', '','')
-    +card('.modal-larissa','assets/img/equipe2018/DrBarbara.jpg', 'assets/img/album2018/68.jpg', 'Dra. Bárbara Viana', 'Pós-Graduada em Restaurações Diretas e Indiretas.', 'Especialização em Implantodontia.', 'Especialização em Prótese Dentária.', '', '', '', '','')
-    +card('.modal-mayla','assets/img/equipe2018/DrMayla.jpg', 'assets/img/album2018/52.jpg', 'Dra. Mayla Ditzel', 'Especialista em Endodontia.', '', '', '', '', '', '','')
-    +card('.modal-carolina','assets/img/equipe2018/DrCarolina.jpg', 'assets/img/album2018/51.jpg', 'Dra. Carolina Toledo', 'Especialista em Odontopediatria.', 'Especialização em Ortodontia.', '', '', '', '', '','')
-    +card('','assets/img/equipe2018/DrLuiz.jpg', 'assets/img/album2018/67.jpg', 'Dr. Luís Augusto', 'Pós graduado em cirurgia oral menor.', 'Especialização em Implantodontia', 'Especialização em Prótese Dentária', '', '', '', '','')
-    +card('','assets/img/equipe2018/DrRafaela.jpg', 'assets/img/album2018/71.jpg', 'Dra. Rafaela Peixoto', 'Especialista em OdontoPediatria.', '', '', '', '', '', '','')
-    +card('','assets/img/equipe2018/DrGiulia.jpg', 'assets/img/album2018/72.jpg', 'Dra. Giulia Barbosa', 'Clinica Geral.', '', '', '', '', '', '','')
-    +card('','assets/img/equipe2018/DrLaryssa.jpg', 'assets/img/album2018/73.jpg', 'Dra. Laryssa Macedo', 'Especialização em Ortodontia', 'Pós Graduada em Harmonização Oro Facial', 'Pós Graduada em Cirurgia Oral Menor', '', '', '', '','')
-
++col-md-3('.modal-maira','assets/img/equipe2018/DrMaira.jpg','Dra. Maíra Mascarenhas', 'Endodontia')
++col-md-3('','assets/img/equipe2018/DrMarcella.jpg','Dra. Marcella Meirelles', 'Ortodontia / Estética')
++col-md-3('','assets/img/equipe2018/DrBarbara.jpg','Dra. Bárbara Viana', 'Restaurações Diretas e Indiretas')
++col-md-3('','assets/img/equipe2018/DrMayla.jpg','Dra. Mayla Ditzel', 'Endodontia')
++col-md-3('','assets/img/equipe2018/DrCarolina.jpg','Dra. Carolina Toledo', 'Odontopediatria')
++col-md-3('','assets/img/equipe2018/DrLuiz.jpg','Dr. Luís Augusto', 'Cirurgia / Prótese')
++col-md-3('','assets/img/equipe2018/DrRafaela.jpg','Dra. Rafaela Peixoto', 'OdontoPediatria')
++col-md-3('','assets/img/equipe2018/DrGiulia.jpg','Dra. Giulia Barbosa', 'Clinica Geral')
++col-md-3('','assets/img/equipe2018/DrNatasha.jpg','Dra. Natasha Penafort', 'Clinica Geral')
++col-md-3('','assets/img/equipe2018/DrNatalia.jpg','Dra. Natália Santi', 'Clinica Geral')
++col-md-3('','assets/img/equipe2018/DrAnny.jpg','Dra. Anny Ledo', 'Harmonizaçāo Facial')
+//- +col-md-3('','assets/img/equipe2018/DrLaryssa.jpg','Dra. Laryssa Macedo', 'Harmonização Oro Facial')
 
 include modal/thales
 include modal/ivanir
