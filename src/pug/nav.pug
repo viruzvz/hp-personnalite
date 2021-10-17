@@ -1,13 +1,12 @@
 mixin menu(classe, link)
   ul(class!=classe)
     li.nav-item
-      a(class!=link, href="#home"): strong Home
+      a(class!=link, href="#home") Home
     li.nav-item
-      a(class!=link, href="#especialidades"): strong Especialidades
+      a(class!=link, href="#especialidades") Especialidades
     li.nav-item
-      a(class!=link, href="#equipe"): strong Equipe
+      a(class!=link, href="#equipe") Equipe
     li.nav-item
-      a(class!=link, href="#contatos"): strong Contatos
+      a(class!=link, href="#contatos") Contatos
 
 
-+menu('nav navbar-nav head-menu fs--two s-uppercase','l-transition--default')

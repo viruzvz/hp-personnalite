@@ -716,6 +716,43 @@ now override the 3.3 new styles for modern browsers & apply opacity
   }
 }
 
+.hero-nav {
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+
+  ul {
+    margin: 0;
+    padding: 15px 0;
+  }
+
+  li {
+    list-style: none;
+    display: inline;
+  }
+
+  li:not(:first-child) {
+    margin-left: 15px;
+  }
+  
+  a {
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.2s linear;
+    &:hover {
+      color: #96a26a;
+      text-decoration: none;
+    }
+  }
+
+}
+.hero-svg {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero--container {
   display: flex;
   flex-direction: column;
@@ -749,7 +786,8 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .hero-item {
-  background-image: url('../assets/img/hero.jpg');
+  background: rgb(74,76,79);
+  background: linear-gradient(90deg, rgba(74,76,79,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 .setsubbackground {

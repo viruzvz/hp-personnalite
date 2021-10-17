@@ -1,10 +1,15 @@
-section.hero.hero-item(role='Apresentação')
+.hero.hero-item(role='Apresentação')
   .setsubbackground.hero-item--3
+    .hero-nav
+      include nav.pug
+      +menu('','')
     .container.h-100
       .row.h-100
         .hero--container
-          .s-medium
-            img(src="assets/img/logoWhite.svg", alt="Logo", width="200px", height="103px")
-          h1.title--hero medicina dentária ESPECIALIZADA
-          p.subtitle--hero  ESTÉTICA DO SORRISO
+          .hero-svg
+            img(src="assets/img/logoGold.svg", alt="Logo", width="300px")
+            img.hidden-xs(src="assets/img/subtitle.svg", alt="Logo" width="571px")
+            img.visible-xs(src="assets/img/subtitle2.svg", alt="Logo" width="300px")
+          //- h1.title--hero medicina dentária ESPECIALIZADA
+          //- p.subtitle--hero  ESTÉTICA DO SORRISO
 
