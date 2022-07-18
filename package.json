@@ -51,7 +51,7 @@
     "jquery": "^3.6.0",
     "jquery-bridget": "^3.0.0",
     "jquery-touchswipe": "^1.6.19",
-    "jquery-ui": "^1.13.0",
+    "jquery-ui": "^1.13.2",
     "jquery-ui-dist": "^1.12.1",
     "serve": "^2.0.0",
     "stickyfill": "^1.1.1-strict",
